@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:onClick="buttonOnClick2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End"
+        android:id="@+id/btnEnd"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eating"
+        android:id="@+id/btneat"
+        android:textOn="On"
+        android:textOff = "Off"
+        android:checked= "false"
+        android:onClick="changeEatState"
+        android:layout_below="@+id/smoke"
+        android:layout_toStartOf="@+id/btnEnd" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="On"
+        android:textOff = "off"
+        android:id="@+id/btnsmoke"
+        android:checked ="false"
+        android:onClick="changeSmokeState"
+        android:layout_alignTop="@+id/btneat"
+        android:layout_toEndOf="@+id/btnEnd" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "Smoking"
+        android:id="@+id/smoke"
+        android:layout_alignTop="@+id/eating"
+        android:layout_alignStart="@+id/btnsmoke" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eating"
+        android:id="@+id/eating"
+        android:layout_marginTop="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/btneat" />
+
+
+
+</RelativeLayout>
